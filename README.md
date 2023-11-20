@@ -1,6 +1,6 @@
 # Web
 
-![](https://cllli.oss-cn-beijing.aliyuncs.com/banner-cllli.png?Expires=1700462537&OSSAccessKeyId=TMP.3KfxwxXC6d7QZSdCSqHy6hbf7z8rFrj7zK9Ug5BCRHwLg27QJrrPAumdwPgr1J7JeLavPco3TZPVQnF2sKyo86Z8xazhhP&Signature=ZsWsqOGiaq0ow8QFt3SLhX9VSrA%3D)
+![](https://cllli.oss-cn-beijing.aliyuncs.com/banner-cllli.png)
 
 <!DOCTYPE html>
 <html lang="zh-CN">
