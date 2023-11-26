@@ -1,3 +1,4 @@
+User
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -16,6 +17,8 @@
   <meta name="theme-color" content="#1C1C1F">
   <link rel="stylesheet" href="https://cdn3.codesign.qq.com/icons/X2bzpZvRWkZkAaV/latest/iconfont.css">
   <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 
   
   <script>
@@ -26,17 +29,6 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-
-      document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
-      loop: true, // 使轮播无限循环
-      effect: 'fade', // 使用淡入淡出效果
-      autoplay: {
-        delay: 5000, // 图片切换间隔时间（单位为毫秒）
-        disableOnInteraction: false, // 用户操作后是否禁用自动播放
-      },
-    });
-  });
   </script>
 </head>
 
@@ -202,19 +194,40 @@
     </div>
   </div>
 
-<!-- 壁纸轮播 -->
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG" alt="壁纸1">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9316.JPG" alt="壁纸1">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9317.JPG" alt="壁纸1">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9318.JPG" alt="壁纸1">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9308.JPG" alt="壁纸1">
-      <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9310.JPG" alt="壁纸1">
+  <!-- 壁纸 -->
+<div class="special-card">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- 根据需要添加更多图像 -->
+      <div class="swiper-slide">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG" alt="壁纸1">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9316.JPG" alt="壁纸1">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9317.JPG" alt="壁纸1">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9318.JPG" alt="壁纸1">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9308.JPG" alt="壁纸1">
+          <img src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9310.JPG" alt="壁纸1">
+          </div>
+      <!-- 添加更多不同的图像幻灯片 -->
     </div>
+  </div>
+  <div class="special-card-left">
+    <!-- 现有内容保持不变 -->
+  </div>
 </div>
 
+  <!-- 壁纸 -->
+  <div class="special-card">
+    <div class="special-card-left">
+      <div class="tips">wallpaper</div>
+      <div class="title">壁纸</div>
+      <div class="discription">iPhone 壁纸分享</div>
+      <div class="button-group">
+         <a class="button linkbutton" href="https://blog.cllli.com/2023/11/17/wallpaper/">前往</a>
+        <span class="linkbotton-tips"></span>
+      </div>
+    </div>
+    <img class="special-card-right" src="https://ossoososssn.oss-cn-beijing.aliyuncs.com/wallpaper/1/top.jpg"></img>
+  </div>
 
 
 
@@ -226,7 +239,18 @@
   </div>
 </body>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 2000, // 2秒
+    },
+    effect: 'fade', // 你可以将其更改为 'slide' 或其他可用的效果
+  });
+</script>
+  
 <script src="/js/simpleParallax.min.js"></script>
 <script src="/js/main.js"></script>
 
-</html>
+</html>  
