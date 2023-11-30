@@ -98,48 +98,36 @@ function scrollToTopWithAnimation() {
 
 // main.js
 
-// 在文档加载完成后执行
-document.addEventListener("DOMContentLoaded", function () {
-  // 获取图片容器和所有图片元素
-  var imageContainer = document.querySelector(".special-card-right");
-  var images = imageContainer.querySelectorAll("img");
+$(document).ready(function () {
+  // 获取所有图片元素
+  var images = $('.special-card-right img');
+  var currentIndex = 0; // 记录当前显示的图片索引
 
-  // 初始化索引和定时器
-  var currentIndex = 0;
-  var timer;
+  // 设置第一张图片为活动状态
+  images.eq(currentIndex).addClass('active');
 
-  // 自动切换图片的函数
-  function autoChangeImage() {
+  // 自动切换图片
+  setInterval(function () {
+    // 移除当前活动图片的 active 类
+    images.eq(currentIndex).removeClass('active');
+
+    // 更新索引，确保不超出图片数量
     currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
 
-  // 显示特定索引的图片
-  function showImage(index) {
-    images.forEach(function (image, i) {
-      image.style.display = i === index ? "block" : "none";
-    });
-  }
+    // 添加新的 active 类，显示下一张图片
+    images.eq(currentIndex).addClass('active');
+  }, 2000); // 切换间隔时间，单位为毫秒
 
-  // 启动定时器，每隔两秒切换一次图片
-  timer = setInterval(autoChangeImage, 2000);
+  // 左右滑动切换图片
+  $('.special-card-right').on('click', function () {
+    // 移除当前活动图片的 active 类
+    images.eq(currentIndex).removeClass('active');
 
-  // 左右滑动切换图片的事件监听
-  imageContainer.addEventListener("click", function (event) {
-    // 根据点击位置判断是左滑还是右滑
-    if (event.clientX < window.innerWidth / 2) {
-      // 左滑
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-    } else {
-      // 右滑
-      currentIndex = (currentIndex + 1) % images.length;
-    }
+    // 更新索引，确保不超出图片数量
+    currentIndex = (currentIndex + 1) % images.length;
 
-    // 显示当前索引的图片
-    showImage(currentIndex);
-
-    // 重置定时器
-    clearInterval(timer);
-    timer = setInterval(autoChangeImage, 2000);
+    // 添加新的 active 类，显示下一张图片
+    images.eq(currentIndex).addClass('active');
   });
 });
+
