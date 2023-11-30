@@ -97,35 +97,47 @@ function scrollToTopWithAnimation() {
 }
 
 // 替换为你的图片链接数组
+// 替换为你的图片链接数组
 const imageUrls = [
-  'url_to_your_image_1.jpg',
-  'url_to_your_image_2.jpg',
-  'url_to_your_image_3.jpg',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9316.JPG',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9317.JPG',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9318.JPG"',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9308.JPG',
+  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9310.JPG',
   // 添加更多图片链接
 ];
 
-const imageTiles = document.querySelectorAll('.image-tile');
+const puzzlePieces = document.querySelectorAll('.puzzle-piece');
+let currentIndex = 0;
 
-function getRandomImage() {
-  return imageUrls[Math.floor(Math.random() * imageUrls.length)];
+function updatePiece(piece, imageUrl) {
+  piece.style.backgroundImage = `url(${imageUrl})`;
 }
 
-function updateImage(tile) {
-  tile.style.backgroundImage = getRandomImage();
-}
-
-function updateAllImages() {
-  imageTiles.forEach((tile) => {
-    updateImage(tile);
+function shufflePieces() {
+  puzzlePieces.forEach((piece, index) => {
+    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const imageUrl = imageUrls[randomIndex];
+    updatePiece(piece, imageUrl);
   });
 }
 
-// 初始加载图片
-updateAllImages();
+function init() {
+  shufflePieces();
 
-// 定时更换图片（这里设置为每隔5秒更换一次）
-setInterval(() => {
-  updateAllImages();
-}, 5000);
+  // 为每个拼图块添加点击事件
+  puzzlePieces.forEach((piece, index) => {
+    piece.addEventListener('click', () => {
+      // 交换当前点击的拼图块和空白拼图块的位置
+      const tempImageUrl = puzzlePieces[currentIndex].style.backgroundImage;
+      puzzlePieces[currentIndex].style.backgroundImage = piece.style.backgroundImage;
+      piece.style.backgroundImage = tempImageUrl;
+    });
+  });
+}
+
+// 初始化
+init();
 
 
