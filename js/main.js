@@ -96,38 +96,4 @@ function scrollToTopWithAnimation() {
   requestAnimationFrame(animation);
 }
 
-// main.js
-
-$(document).ready(function () {
-  // 获取所有图片元素
-  var images = $('.special-card-right img');
-  var currentIndex = 0; // 记录当前显示的图片索引
-
-  // 设置第一张图片为活动状态
-  images.eq(currentIndex).addClass('active');
-
-  // 自动切换图片
-  setInterval(function () {
-    // 移除当前活动图片的 active 类
-    images.eq(currentIndex).removeClass('active');
-
-    // 更新索引，确保不超出图片数量
-    currentIndex = (currentIndex + 1) % images.length;
-
-    // 添加新的 active 类，显示下一张图片
-    images.eq(currentIndex).addClass('active');
-  }, 2000); // 切换间隔时间，单位为毫秒
-
-  // 左右滑动切换图片
-  $('.special-card-right').on('click', function () {
-    // 移除当前活动图片的 active 类
-    images.eq(currentIndex).removeClass('active');
-
-    // 更新索引，确保不超出图片数量
-    currentIndex = (currentIndex + 1) % images.length;
-
-    // 添加新的 active 类，显示下一张图片
-    images.eq(currentIndex).addClass('active');
-  });
-});
 
