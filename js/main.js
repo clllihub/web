@@ -96,30 +96,50 @@ function scrollToTopWithAnimation() {
   requestAnimationFrame(animation);
 }
 
-// 添加到你的 main.js 文件中，或创建一个新的 JS 文件
+// main.js
+
+// 在文档加载完成后执行
 document.addEventListener("DOMContentLoaded", function () {
-  // 设置滚动速度（可以调整）
-  const scrollSpeed = 1;
+  // 获取图片容器和所有图片元素
+  var imageContainer = document.querySelector(".special-card-right");
+  var images = imageContainer.querySelectorAll("img");
 
-  // 获取容器和其第一个子元素（第一张图片）
-  const container = document.querySelector(".image-scroll-container");
-  const firstImage = container.querySelector("img");
+  // 初始化索引和定时器
+  var currentIndex = 0;
+  var timer;
 
-  // 克隆第一张图片并将其附加到容器
-  const clonedImage = firstImage.cloneNode(true);
-  container.appendChild(clonedImage);
-
-  // 滚动图片的函数
-  function scrollImages() {
-    // 如果滚动到最左边，将滚动位置重置为 0
-    if (container.scrollLeft >= firstImage.clientWidth) {
-      container.scrollLeft = 0;
-    } else {
-      // 否则，继续滚动
-      container.scrollLeft += scrollSpeed;
-    }
+  // 自动切换图片的函数
+  function autoChangeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
   }
 
-  // 设置定时器，每隔一段时间触发滚动函数
-  setInterval(scrollImages, 50); // 50 毫秒为例，可以根据需要调整
+  // 显示特定索引的图片
+  function showImage(index) {
+    images.forEach(function (image, i) {
+      image.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  // 启动定时器，每隔两秒切换一次图片
+  timer = setInterval(autoChangeImage, 2000);
+
+  // 左右滑动切换图片的事件监听
+  imageContainer.addEventListener("click", function (event) {
+    // 根据点击位置判断是左滑还是右滑
+    if (event.clientX < window.innerWidth / 2) {
+      // 左滑
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    } else {
+      // 右滑
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // 显示当前索引的图片
+    showImage(currentIndex);
+
+    // 重置定时器
+    clearInterval(timer);
+    timer = setInterval(autoChangeImage, 2000);
+  });
 });
