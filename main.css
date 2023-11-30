@@ -908,22 +908,3 @@ span.avatar-name {
   }
 }
 
-/* main.css */
-
-.special-card-right {
-  width: 100%;
-  overflow: hidden;
-}
-
-.special-card-right img {
-  width: 100%; /* 设置图片宽度为100% */
-  height: auto; /* 让高度自适应，保持图片比例 */
-  display: none;
-}
-
-/* 添加以下样式，设置固定宽高 */
-.special-card-right img.active {
-  width: 100%; /* 你想要的固定宽度 */
-  height: 300px; /* 你想要的固定高度 */
-  display: block; /* 显示当前活动图片 */
-}
