@@ -96,4 +96,36 @@ function scrollToTopWithAnimation() {
   requestAnimationFrame(animation);
 }
 
+// 替换为你的图片链接数组
+const imageUrls = [
+  'url_to_your_image_1.jpg',
+  'url_to_your_image_2.jpg',
+  'url_to_your_image_3.jpg',
+  // 添加更多图片链接
+];
+
+const imageTiles = document.querySelectorAll('.image-tile');
+
+function getRandomImage() {
+  return imageUrls[Math.floor(Math.random() * imageUrls.length)];
+}
+
+function updateImage(tile) {
+  tile.style.backgroundImage = getRandomImage();
+}
+
+function updateAllImages() {
+  imageTiles.forEach((tile) => {
+    updateImage(tile);
+  });
+}
+
+// 初始加载图片
+updateAllImages();
+
+// 定时更换图片（这里设置为每隔5秒更换一次）
+setInterval(() => {
+  updateAllImages();
+}, 5000);
+
 
