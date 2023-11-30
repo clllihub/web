@@ -908,3 +908,17 @@ span.avatar-name {
   }
 }
 
+.image-tile-container {
+  display: flex;
+}
+
+.image-tile {
+  width: 150px; /* 初始宽度 */
+  height: 150px; /* 初始高度 */
+  margin: 10px; /* 图片之间的间距 */
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease; /* 过渡效果 */
+}
+
+
