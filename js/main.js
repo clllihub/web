@@ -95,3 +95,31 @@ function scrollToTopWithAnimation() {
 
   requestAnimationFrame(animation);
 }
+
+// 添加到你的 main.js 文件中，或创建一个新的 JS 文件
+document.addEventListener("DOMContentLoaded", function () {
+  // 设置滚动速度（可以调整）
+  const scrollSpeed = 1;
+
+  // 获取容器和其第一个子元素（第一张图片）
+  const container = document.querySelector(".image-scroll-container");
+  const firstImage = container.querySelector("img");
+
+  // 克隆第一张图片并将其附加到容器
+  const clonedImage = firstImage.cloneNode(true);
+  container.appendChild(clonedImage);
+
+  // 滚动图片的函数
+  function scrollImages() {
+    // 如果滚动到最左边，将滚动位置重置为 0
+    if (container.scrollLeft >= firstImage.clientWidth) {
+      container.scrollLeft = 0;
+    } else {
+      // 否则，继续滚动
+      container.scrollLeft += scrollSpeed;
+    }
+  }
+
+  // 设置定时器，每隔一段时间触发滚动函数
+  setInterval(scrollImages, 50); // 50 毫秒为例，可以根据需要调整
+});
