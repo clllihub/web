@@ -96,48 +96,5 @@ function scrollToTopWithAnimation() {
   requestAnimationFrame(animation);
 }
 
-// 替换为你的图片链接数组
-// 替换为你的图片链接数组
-const imageUrls = [
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG',
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9316.JPG',
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9317.JPG',
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9318.JPG"',
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9308.JPG',
-  'https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9310.JPG',
-  // 添加更多图片链接
-];
-
-const puzzlePieces = document.querySelectorAll('.puzzle-piece');
-let currentIndex = 0;
-
-function updatePiece(piece, imageUrl) {
-  piece.style.backgroundImage = `url(${imageUrl})`;
-}
-
-function shufflePieces() {
-  puzzlePieces.forEach((piece, index) => {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
-    const imageUrl = imageUrls[randomIndex];
-    updatePiece(piece, imageUrl);
-  });
-}
-
-function init() {
-  shufflePieces();
-
-  // 为每个拼图块添加点击事件
-  puzzlePieces.forEach((piece, index) => {
-    piece.addEventListener('click', () => {
-      // 交换当前点击的拼图块和空白拼图块的位置
-      const tempImageUrl = puzzlePieces[currentIndex].style.backgroundImage;
-      puzzlePieces[currentIndex].style.backgroundImage = piece.style.backgroundImage;
-      piece.style.backgroundImage = tempImageUrl;
-    });
-  });
-}
-
-// 初始化
-init();
 
 
