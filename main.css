@@ -908,20 +908,6 @@ span.avatar-name {
   }
 }
 
-.puzzle-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px; /* 调整容器宽度 */
-}
-
-.puzzle-piece {
-  width: 100px; /* 调整每个拼图块的宽度 */
-  height: 100px; /* 调整每个拼图块的高度 */
-  background-size: cover;
-  background-position: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
 
 
 
