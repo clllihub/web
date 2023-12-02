@@ -908,6 +908,30 @@ span.avatar-name {
   }
 }
 
+.latest-works {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-gallery {
+    /* Existing styles */
+    width: 65%; /* Adjust the width as necessary */
+}
+
+.image-display-area {
+    width: 35%; /* Adjust the width as necessary */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.image-display-area img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Add any additional styles for the images */
+}
 
 
 
