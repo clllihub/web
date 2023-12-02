@@ -909,29 +909,52 @@ span.avatar-name {
 }
 
 .latest-works {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-buttons {
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
 }
 
 .work-gallery {
-    /* Existing styles */
-    width: 65%; /* Adjust the width as necessary */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
 }
 
-.image-display-area {
-    width: 35%; /* Adjust the width as necessary */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+.work-item {
+    overflow: hidden;
 }
 
-.image-display-area img {
-    max-width: 100%;
+.work-item img {
+    width: 100%;
     height: auto;
     display: block;
-    /* Add any additional styles for the images */
+    transition: transform 0.3s ease;
 }
 
+.work-item:hover img {
+    transform: scale(1.05);
+}
+
+.work-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.work-item.wide {
+    grid-column: span 2;
+}
+
+.work-item.tall {
+    grid-row: span 2;
+}
 
 
