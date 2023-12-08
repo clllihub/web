@@ -3,8 +3,8 @@
 
 /* 定义全局变量 */
 :root {
-  --heo-white: #101010;
-  --heo-white-op: rgba(242, 242, 242, 0.936);
+  --heo-white: #fff;
+  --heo-white-op: rgba(255, 255, 255, 0.2);
   --heo-black: #000;
   --heo-black-op: rgba(0, 0, 0, 0.2);
   --heo-none: #00001e00;
@@ -79,17 +79,9 @@
 
 /* 定义浮动动画 */
 @keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-
-  50% {
-    transform: translate(0, 10px);
-  }
-
-  100% {
-    transform: translate(0, 0px);
-  }
+  0% { transform: translate(0, 0px); }
+  50% { transform: translate(0, 10px); }
+  100% { transform: translate(0, 0px); }
 }
 
 /* 定义展示横幅动画 */
@@ -98,15 +90,12 @@
     top: 0px;
     background: var(--heo-theme);
   }
-
   30% {
     top: 40px;
   }
-
   80% {
     background: var(--heo-theme);
   }
-
   100% {
     background: var(--heo-secondbg);
   }
@@ -117,15 +106,12 @@
   0% {
     color: var(--heo-white);
   }
-
   30% {
     /* 暂无内容 */
   }
-
   80% {
     color: var(--heo-white);
   }
-
   100% {
     color: var(--heo-fontcolor);
   }
@@ -196,8 +182,7 @@ img {
   align-items: center;
   z-index: 2;
   transition: ease-in-out 0.3s;
-  backdrop-filter: blur(10px);
-  /* 调整模糊效果的值 */
+  backdrop-filter: blur(10px); /* 调整模糊效果的值 */
 }
 
 /* 导航栏内容容器样式 */
@@ -341,7 +326,7 @@ a.about-button {
   background: var(--heo-card-btn-bg);
   color: var(--heo-white);
   border-radius: 29px;
-  box-shadow: 0px 12px 12px -9px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 12px 12px -9px rgba(0,0,0,0.29);
   margin-top: 64px;
   width: fit-content;
   transition: ease-in-out 0.3s;
@@ -458,8 +443,7 @@ span.linkbotton-tips {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  /* 这里是超出几行省略 */
+  -webkit-line-clamp: 1; /* 这里是超出几行省略 */
   overflow: hidden;
 }
 
@@ -801,7 +785,7 @@ span.avatar-name {
   a.about-button {
     margin-top: 40px;
   }
-
+  
   .group-items {
     margin-top: 30px;
   }
@@ -816,9 +800,9 @@ span.avatar-name {
   }
 
   .product-group {
-    margin: 0px;
+    margin:  0px;
   }
-
+  
   .group-item {
     width: 100%;
   }
@@ -886,7 +870,7 @@ span.avatar-name {
   .show-menu .menu-list a.nav-item {
     padding: 12px 8px;
   }
-
+  
   .banner-pic {
     margin-top: 20px;
     height: 200px;
@@ -931,7 +915,7 @@ span.avatar-name {
   a.about-button {
     margin-top: 40px;
   }
-
+  
   .group-items {
     margin-top: 30px;
   }
@@ -939,7 +923,6 @@ span.avatar-name {
   .group-item {
     flex-direction: row;
   }
-
   .group-info-group {
     margin-left: 20px;
     flex-direction: row;
@@ -960,8 +943,7 @@ span.avatar-name {
     margin: 0;
   }
 
-  img.group-item-icon-img,
-  a.group-item-icon {
+  img.group-item-icon-img,a.group-item-icon {
     width: 40px;
     height: 40px;
     border-radius: 12px;
@@ -1006,3 +988,4 @@ span.avatar-name {
     display: none;
   }
 }
+
