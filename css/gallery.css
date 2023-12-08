@@ -35,8 +35,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-rows: minmax(180px, auto);
-    gap: 20px;
-    padding: 20px;
+    gap: 5px;
+    padding: 5px;
     grid-auto-flow: dense;
 }
 
@@ -52,24 +52,24 @@ body {
 
 .grid-item:nth-child(1),
 input#img-1:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/tonin-rocodromo.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/83.jpg);
 }
 
 .grid-item:nth-child(2),
 input#img-2:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/biafra-1-hueso.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/23.jpg);
 }
 
 .grid-item:nth-child(3),
 input#img-3:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/clan-de-los-osos-pandemonium.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/77.jpg);
     background-position: 55% center;
 }
 
 
 .grid-item:nth-child(4),
 input#img-4:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/gallego-cueva-mora.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/82.jpg);
 }
 
 .grid-item:nth-child(5),
@@ -89,7 +89,7 @@ input#img-7:checked~.modal-window {
 
 .grid-item:nth-child(8),
 input#img-8:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/oscar-raul-hueco-hoces2.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG);
     background-position: 85% center;
 }
 
@@ -105,12 +105,12 @@ input#img-10:checked~.modal-window {
 
 .grid-item:nth-child(11),
 input#img-11:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/rapel-sarcofago.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9315.JPG);
 }
 
 .grid-item:nth-child(12),
 input#img-12:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/mira-un-buho-principiantes.jpg);
+    background-image: url();
 }
 
 .grid-item:nth-child(13),
@@ -126,7 +126,7 @@ input#img-14:checked~.modal-window {
 
 .grid-item:nth-child(15),
 input#img-15:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/oscar-raul-hueco-hoces.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9317.JPG);
 }
 
 .grid-item:nth-child(16),
@@ -141,7 +141,7 @@ input#img-17:checked~.modal-window {
 
 .grid-item:nth-child(18),
 input#img-18:checked~.modal-window {
-    background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images/fisura-ines-rodriguez-tres-coronas.jpg);
+    background-image: url(https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/2023/11/26/IMG_9310.JPG);
 }
 
 .grid-item:nth-child(19),
