@@ -1006,9 +1006,32 @@ span.avatar-name {
     display: none;
   }
 }
-.nav-item,
-.nav-content a,
-.nav-left a,
-.nav-right a {
-    color: #000; /* Black color for text */
+
+.hero-section {
+  background-image: url('path-to-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 150px 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-item {
+  flex: 1;
+  overflow: hidden;
+}
+
+.gallery-item.large { flex: 2; }
+.gallery-item.medium { flex: 1; }
+.gallery-item.small { flex: 1; }
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
