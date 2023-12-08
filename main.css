@@ -1,10 +1,12 @@
-@charset  "UTF-8";
+/* 设置字符集为UTF-8 */
+@charset "UTF-8";
 
-:root{
-  --heo-white: #fff;
-  --heo-white-op: rgba(255,255,255,0.2);
+/* 定义全局变量 */
+:root {
+  --heo-white: #101010;
+  --heo-white-op: rgba(242, 242, 242, 0.936);
   --heo-black: #000;
-  --heo-black-op: rgba(0,0,0,0.2);
+  --heo-black-op: rgba(0, 0, 0, 0.2);
   --heo-none: #00001e00;
   --heo-gray: #999999;
   --heo-gray-op: #9999992b;
@@ -13,15 +15,15 @@
   --heo-main-op: var(--heo-theme-op);
   --heo-main-none: var(--heo-theme-none);
   --heo-shadow-theme: 0 8px 12px -3px var(--heo-theme-op);
-  --heo-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0,.15);
+  --heo-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, .15);
   --heo-shadow-main: 0 8px 12px -3px var(--heo-main-op);
-  --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234,.20);
-  --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255,.20);
-  --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0,.05);
-  --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62,.12);
+  --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, .20);
+  --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, .20);
+  --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0, .05);
+  --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, .12);
   --heo-shadow-red: 0 8px 12px -3px #ee7d7936;
   --heo-shadow-green: 0 8px 12px -3px #87ee7936;
-  --heo-logo-color: linear-gradient(215deg,#4584ff 0%,#cf0db9 100%);
+  --heo-logo-color: linear-gradient(215deg, #4584ff 0%, #cf0db9 100%);
   --heo-snackbar-time: 5s;
   --style-border: 1px solid var(--heo-card-border);
   --style-border-always: 1px solid var(--heo-card-border);
@@ -30,11 +32,13 @@
   --style-border-dashed: 1px dashed var(--heo-theme-op);
 }
 
+/* 选中文本时的样式 */
 ::selection {
   background: var(--heo-fontcolor);
   color: var(--heo-background);
 }
 
+/* 定义主题色 */
 :root {
   --heo-theme: #4375ff;
   --heo-theme-op: #4375ff23;
@@ -62,54 +66,72 @@
   --heo-post-blockquote-bg: #fafcff;
   --heo-post-tabs-bg: #f2f5f8;
   --heo-secondbg: #eaeaea;
-  --heo-shadow-nav:0 5px 12px -5px rgba(102, 68, 68, 0.05);
+  --heo-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
   --heo-card-bg: #fff;
   --heo-card-bg-op: var(--heo-black-op);
   --heo-card-bg-none: rgba(255, 255, 255, 0);
-  --heo-shadow-lightblack:0 5px 12px -5px rgba(102, 68, 68, 0.00);
-  --heo-shadow-light2black:0 5px 12px -5px rgba(102, 68, 68, 0.00);
+  --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
+  --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
   --heo-card-border: #e3e8f7;
   --heo-shadow-border: 0 8px 16px -4px #2c2d300c;
   --style-border-forever: 2px solid var(--heo-main);
 }
 
+/* 定义浮动动画 */
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 10px); }
-  100%   { transform: translate(0, 0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
 }
 
+/* 定义展示横幅动画 */
 @keyframes showbanner {
   0% {
     top: 0px;
     background: var(--heo-theme);
   }
+
   30% {
     top: 40px;
   }
+
   80% {
     background: var(--heo-theme);
   }
+
   100% {
     background: var(--heo-secondbg);
   }
 }
 
+/* 定义展示横幅文本动画 */
 @keyframes showbannertext {
   0% {
     color: var(--heo-white);
   }
+
   30% {
-    
+    /* 暂无内容 */
   }
+
   80% {
     color: var(--heo-white);
   }
+
   100% {
     color: var(--heo-fontcolor);
   }
 }
 
+/* 页面整体样式 */
 body {
   background: var(--heo-background);
   display: flex;
@@ -120,21 +142,25 @@ body {
   align-items: center;
 }
 
+/* 页面内需要留白的容器样式 */
 body .need-padding {
   max-width: 1200px;
   width: 90%;
 }
 
+/* 移除链接的下划线及用户可选内容 */
 a {
-  text-decoration:none;
-  user-select:none;
+  text-decoration: none;
+  user-select: none;
   -webkit-user-drag: none;
 }
 
+/* 禁止用户选择文本 */
 span {
-  user-select:none;
+  user-select: none;
 }
 
+/* 上标样式 */
 sup {
   font-size: 12px;
   background: var(--heo-green);
@@ -147,15 +173,18 @@ sup {
   top: -4px;
 }
 
+/* 上标样式（高亮） */
 sup.hot {
   background: var(--heo-red);
 }
 
+/* 禁止图片拖动 */
 img {
-  user-select:none;
+  user-select: none;
   -webkit-user-drag: none;
 }
 
+/* 导航栏样式 */
 .nav {
   display: flex;
   width: 100%;
@@ -167,9 +196,11 @@ img {
   align-items: center;
   z-index: 2;
   transition: ease-in-out 0.3s;
-  backdrop-filter: blur(10px); /* 调整模糊效果的值 */
+  backdrop-filter: blur(10px);
+  /* 调整模糊效果的值 */
 }
 
+/* 导航栏内容容器样式 */
 .nav-content {
   max-width: 1200px;
   width: 90%;
@@ -181,6 +212,7 @@ img {
   transition: ease-in-out 0.3s;
 }
 
+/* 导航栏横幅样式 */
 .nav-banner {
   width: 100%;
   height: 44px;
@@ -193,52 +225,60 @@ img {
   animation: showbanner 4s ease-in-out;
   z-index: 1;
   background: var(--heo-secondbg);
-  
 }
 
-.nav-banner a{
+/* 导航栏横幅中的链接样式 */
+.nav-banner a {
   font-size: 12px;
   transition: ease-in-out 0.3s;
   animation: showbannertext 4s ease-in-out;
   color: var(--heo-fontcolor);
 }
 
+/* 导航栏横幅中的链接悬停样式 */
 .nav-banner a:hover {
   color: var(--heo-main);
 }
 
+/* 导航栏右侧菜单样式 */
 .nav-right .nav-menu {
   display: none;
 }
 
+/* 网站logo样式 */
 a.site-logo {
   display: flex;
   align-items: center;
 }
 
+/* 网站logo图片样式 */
 img.site-logo-img {
   width: 25px;
 }
 
+/* 菜单列表样式 */
 .menu-list {
   display: none;
 }
 
+/* 横幅图片样式 */
 .banner-img {
   width: 405px;
   max-width: 100%;
   animation: floating 4s ease-in-out infinite;
-  pointer-events:none;
-  object-fit:cover;
-  transform: translate(0,  -7px);
+  pointer-events: none;
+  object-fit: cover;
+  transform: translate(0, -7px);
 }
 
+/* 网站名称样式 */
 span.site-name {
   color: var(--heo-white);
   font-size: 14px;
   margin-left: 8px;
 }
 
+/* 导航栏中的链接样式 */
 a.nav-item {
   color: var(--heo-white);
   opacity: 0.8;
@@ -249,17 +289,20 @@ a.nav-item {
   border-radius: 16px;
 }
 
+/* 导航栏中的链接悬停样式 */
 a.nav-item:hover {
   opacity: 1;
   background: var(--heo-card-bg);
   color: var(--heo-fontcolor);
 }
 
+/* 导航栏右侧容器样式 */
 .nav-right {
   display: flex;
   align-items: center;
 }
 
+/* 页面首个堆叠容器样式 */
 .first-stack {
   display: flex;
   justify-content: space-between;
@@ -268,6 +311,7 @@ a.nav-item:hover {
   align-items: center;
 }
 
+/* 页面标题组容器样式 */
 .title-group {
   display: flex;
   flex-direction: column;
@@ -279,6 +323,7 @@ a.nav-item:hover {
   font-family: system-ui;
 }
 
+/* 描述文本样式 */
 span.discription-text {
   display: block;
   font-size: 28px;
@@ -289,13 +334,14 @@ span.discription-text {
   font-weight: bold;
 }
 
+/* "关于"按钮样式 */
 a.about-button {
   display: flex;
   padding: 0 36px;
   background: var(--heo-card-btn-bg);
   color: var(--heo-white);
   border-radius: 29px;
-  box-shadow: 0px 12px 12px -9px rgba(0,0,0,0.29);
+  box-shadow: 0px 12px 12px -9px rgba(0, 0, 0, 0.29);
   margin-top: 64px;
   width: fit-content;
   transition: ease-in-out 0.3s;
@@ -305,56 +351,65 @@ a.about-button {
   height: 48px;
 }
 
+/* 按钮悬停效果 */
 a.about-button:hover {
   background: var(--heo-main);
   box-shadow: 0px 12px 12px -9px rgba(5, 51, 137, 0.29);
 }
 
+/* 产品组样式 */
 .product-group {
   margin: 0;
   width: 100%;
 }
 
+/* 组标题样式 */
 h2.group-title {
   font-size: 32px;
   margin-bottom: 0;
 }
 
+/* 组描述样式 */
 .group-description {
   font-size: 14px;
   color: var(--heo-secondtext);
 }
 
+/* 组项样式 */
 .group-items {
   display: flex;
   margin-top: 60px;
   flex-direction: row;
   flex-wrap: wrap;
-  
 }
 
+/* 单个组项样式 */
 .group-item {
   display: flex;
   width: calc(100% / 3);
   margin-bottom: 60px;
 }
 
+/* 组项图标样式 */
 a.group-item-icon {
   width: 100px;
   height: 100px;
 }
 
+/* 组项图标图片样式 */
 img.group-item-icon-img {
   width: 100px;
   height: 100px;
   border-radius: 28px;
 }
 
+/* 组信息按钮样式 */
 .group-info-button {
   display: flex;
   align-items: center;
 }
 
+/* 链接按钮提示样式 */
 span.linkbotton-tips {
   display: flex;
   margin-left: 10px;
@@ -362,15 +417,18 @@ span.linkbotton-tips {
   color: var(--heo-secondtext);
 }
 
+/* 特殊卡片链接按钮提示样式 */
 .special-card span.linkbotton-tips {
   color: var(--heo-white);
 }
 
+/* 组信息样式 */
 .group-info {
   display: flex;
   flex-direction: column;
 }
 
+/* 组信息组样式 */
 .group-info-group {
   margin-left: 36px;
   display: flex;
@@ -379,6 +437,7 @@ span.linkbotton-tips {
   height: 100px;
 }
 
+/* 组信息组标题样式 */
 .group-info-group a.title {
   color: var(--heo-fontcolor);
   font-size: 20px;
@@ -389,6 +448,7 @@ span.linkbotton-tips {
   font-weight: bold;
 }
 
+/* 组信息组描述样式 */
 .group-info-group a.discription {
   color: var(--heo-fontcolor);
   font-size: 14px;
@@ -398,10 +458,12 @@ span.linkbotton-tips {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; /* 这里是超出几行省略 */
+  -webkit-line-clamp: 1;
+  /* 这里是超出几行省略 */
   overflow: hidden;
 }
 
+/* 链接按钮样式 */
 a.linkbutton {
   padding: 6px 20px;
   display: flex;
@@ -414,14 +476,17 @@ a.linkbutton {
   white-space: nowrap;
 }
 
+/* 链接按钮悬停效果 */
 a.linkbutton:hover {
   filter: brightness(1.2);
 }
 
+/* 链接按钮点击效果 */
 a.linkbutton:active {
   filter: brightness(0.8);
 }
 
+/* 底部样式 */
 .footer {
   padding: 60px 0 60px 0;
   display: flex;
@@ -432,6 +497,7 @@ a.linkbutton:active {
   align-items: center;
 }
 
+/* 底部信息样式 */
 .footer .info {
   font-size: 12px;
   margin: 0 20px;
@@ -441,21 +507,23 @@ a.linkbutton:active {
   margin: 4px 0;
 }
 
+/* 底部信息悬停效果 */
 .footer a.info:hover {
   opacity: 1;
 }
 
+/* 底部信息组样式 */
 .footer .info-group .info:not(:first-child) {
   margin-left: 4px;
 }
 
+/* 底部内容样式 */
 .footer-content {
   display: flex;
   flex-direction: column;
 }
 
-/* banner */
-
+/* 横幅样式 */
 .product-banner {
   background-image: linear-gradient(180deg, #02162A 0%, #00001e 100%);
   width: 100%;
@@ -470,17 +538,20 @@ a.linkbutton:active {
   min-height: 800px;
 }
 
+/* 横幅信息样式 */
 .banner-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* 横幅提示样式 */
 .product-banner .tips {
   color: var(--heo-vip);
   font-size: 14px;
 }
 
+/* 横幅标题样式 */
 .product-banner span.title {
   font-size: 56px;
   color: var(--heo-white);
@@ -490,10 +561,12 @@ a.linkbutton:active {
   margin-top: 12px;
 }
 
+/* 标点样式 */
 span.punctuation {
   position: absolute;
 }
 
+/* 横幅描述组样式 */
 .banner-discription-group {
   display: flex;
   flex-direction: column;
@@ -502,18 +575,21 @@ span.punctuation {
   margin: 24px 0 32px 0;
 }
 
+/* 横幅描述样式 */
 .product-banner span.description {
   font-size: 16px;
   color: var(--heo-white);
   text-align: center;
 }
 
+/* 链接组样式 */
 .link-group {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
 }
 
+/* 主按钮样式 */
 a.primary-button {
   padding: 8px 26px;
   background: var(--heo-white);
@@ -523,11 +599,13 @@ a.primary-button {
   white-space: nowrap;
 }
 
+/* 主按钮悬停效果 */
 a.primary-button:hover {
   background: var(--heo-black);
   color: var(--heo-white);
 }
 
+/* 次级链接样式 */
 a.second-link {
   color: var(--heo-white);
   opacity: 0.6;
@@ -536,10 +614,12 @@ a.second-link {
   transition: ease-in-out 0.3s;
 }
 
+/* 次级链接悬停效果 */
 a.second-link:hover {
   opacity: 1;
 }
 
+/* 横幅图片样式 */
 .banner-pic {
   margin-top: 20px;
   display: flex;
@@ -549,31 +629,37 @@ a.second-link:hover {
   bottom: 100px;
 }
 
+/* 横幅图片样式 */
 .banner-pic-img {
   max-width: 968px;
   width: 100%;
   margin: auto;
 }
 
+/* 内联单词样式 */
 .inline-word {
   word-break: keep-all;
   white-space: nowrap;
 }
 
+/* 第一堆链接样式 */
 .first-stack-links {
   display: flex;
 }
 
+/* 关于按钮社交按钮样式 */
 .about-button.social-button {
   margin-left: 8px;
   padding: 0 16px;
 }
 
+/* 社交按钮图标样式 */
 .about-button.social-button i {
   font-size: 20px;
   line-height: 1;
 }
 
+/* 特殊卡片样式 */
 .special-card {
   background: #131202;
   width: 90%;
@@ -585,6 +671,7 @@ a.second-link:hover {
   height: 500px;
 }
 
+/* 特殊卡片左侧样式 */
 .special-card-left {
   padding: 54px 0 54px 75px;
   z-index: 1;
@@ -592,12 +679,14 @@ a.second-link:hover {
   position: relative;
 }
 
+/* 特殊卡片左侧提示样式 */
 .special-card-left .tips {
   font-size: 18px;
   font-weight: bold;
   color: var(--heo-white);
 }
 
+/* 特殊卡片左侧标题样式 */
 .special-card-left .title {
   font-size: 40px;
   font-weight: bold;
@@ -608,6 +697,7 @@ a.second-link:hover {
   color: var(--heo-white);
 }
 
+/* 特殊卡片左侧描述样式 */
 .special-card-left .discription {
   font-size: 16px;
   margin-top: 24px;
@@ -617,6 +707,7 @@ a.second-link:hover {
   color: var(--heo-white);
 }
 
+/* 特殊卡片左侧按钮组样式 */
 .special-card-left .button-group {
   position: absolute;
   bottom: 56px;
@@ -624,6 +715,7 @@ a.second-link:hover {
   align-items: center;
 }
 
+/* 特殊卡片右侧样式 */
 .special-card-right {
   position: absolute;
   right: 0;
@@ -633,6 +725,7 @@ a.second-link:hover {
   z-index: 0;
 }
 
+/* 头像描述样式 */
 .avatar-discription {
   display: flex;
   flex-direction: column;
@@ -648,12 +741,14 @@ a.second-link:hover {
   box-shadow: var(--heo-shadow-border);
 }
 
+/* 头像描述文本样式 */
 .avatar-discription-text {
   display: flex;
   font-size: 16px;
   text-align: center;
 }
 
+/* 头像名称样式 */
 span.avatar-name {
   display: flex;
   margin: auto;
@@ -662,6 +757,7 @@ span.avatar-name {
   margin-top: 14px;
 }
 
+/* 头像图片样式 */
 .avatar-image {
   width: 60px;
   height: 60px;
@@ -672,6 +768,7 @@ span.avatar-name {
   box-shadow: var(--heo-shadow-lightblack);
 }
 
+/* 头像标题样式 */
 .avatar-title {
   display: flex;
   margin: auto;
@@ -680,7 +777,7 @@ span.avatar-name {
   text-align: center;
 }
 
-
+/* 响应式设计 */
 @media screen and (max-width: 1200px) {
   .group-item {
     width: 50%;
@@ -704,7 +801,7 @@ span.avatar-name {
   a.about-button {
     margin-top: 40px;
   }
-  
+
   .group-items {
     margin-top: 30px;
   }
@@ -719,9 +816,9 @@ span.avatar-name {
   }
 
   .product-group {
-    margin:  0px;
+    margin: 0px;
   }
-  
+
   .group-item {
     width: 100%;
   }
@@ -789,7 +886,7 @@ span.avatar-name {
   .show-menu .menu-list a.nav-item {
     padding: 12px 8px;
   }
-  
+
   .banner-pic {
     margin-top: 20px;
     height: 200px;
@@ -834,7 +931,7 @@ span.avatar-name {
   a.about-button {
     margin-top: 40px;
   }
-  
+
   .group-items {
     margin-top: 30px;
   }
@@ -842,6 +939,7 @@ span.avatar-name {
   .group-item {
     flex-direction: row;
   }
+
   .group-info-group {
     margin-left: 20px;
     flex-direction: row;
@@ -862,7 +960,8 @@ span.avatar-name {
     margin: 0;
   }
 
-  img.group-item-icon-img,a.group-item-icon {
+  img.group-item-icon-img,
+  a.group-item-icon {
     width: 40px;
     height: 40px;
     border-radius: 12px;
@@ -907,4 +1006,3 @@ span.avatar-name {
     display: none;
   }
 }
-
