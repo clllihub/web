@@ -1007,13 +1007,6 @@ span.avatar-name {
   }
 }
 
-.hero {
-  background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/51.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 100px 0;
-}
 
 .gallery {
   display: flex;
