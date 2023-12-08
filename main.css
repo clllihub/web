@@ -1007,12 +1007,12 @@ span.avatar-name {
   }
 }
 
-.hero-section {
-  background-image: url('https://th.bing.com/th/id/R.946a8120d47c5c156fa98021182626a7?rik=nJ0vX5HqMID%2b2Q&pid=ImgRaw&r=0');
+.hero {
+  background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/images/life/photo/1/51.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .gallery {
@@ -1022,16 +1022,14 @@ span.avatar-name {
 }
 
 .gallery-item {
-  flex: 1;
-  overflow: hidden;
+  flex-basis: calc(33.333% - 10px);
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-.gallery-item.large { flex: 2; }
-.gallery-item.medium { flex: 1; }
-.gallery-item.small { flex: 1; }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
 }
+
